@@ -1,4 +1,6 @@
 import { deleteSighting } from "./SightingService"
+import UpdateForm from "./UpdateForm";
+import addSighting from "./App";
 
 const SightingCard = ({sighting, removeSighting}) => {
 
@@ -14,6 +16,8 @@ const SightingCard = ({sighting, removeSighting}) => {
             <p>Location: {sighting.location}</p>
             <p>Date: {sighting.date}</p>
             <button onClick={handleDelete}> 🗑 </button>
+            <button>Update</button>
+            <UpdateForm addSighting={addSighting} sighting={sighting}/>
             <hr></hr>
         </>
     )
